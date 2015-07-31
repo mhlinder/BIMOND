@@ -15,7 +15,7 @@ user's MATLAB path:
   
 These files are included in this repository but can also be obtained
 as part of the
-`[slatec](http://www.mathworks.com/matlabcentral/fileexchange/14535-slatec)`
+[slatec](http://www.mathworks.com/matlabcentral/fileexchange/14535-slatec)
 MATLAB package.
 
 
