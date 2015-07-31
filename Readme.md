@@ -1,7 +1,10 @@
 # BIMOND: Piecewise Bicubic Interpolation
 
-These files provide MATLAB implementations ofthe BIMOND3 and BIMOND4
-algorithms presented by Carlson and Fritsch in [1] and [2], respectively.
+These files provide MATLAB implementations of the BIMOND3 and BIMOND4
+algorithms presented by Carlson and Fritsch in [1] and [2],
+respectively. The BIMOND algorithms are a 2D extension of PCHIP
+(Piecewise Cubic Hermite Interpolating Polynomial), preserving
+monotonicity in the underlying data.
 
 These functions assume that the following files are available in the
 user's MATLAB path:
