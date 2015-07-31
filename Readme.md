@@ -1,6 +1,6 @@
 # BIMOND: Piecewise Bicubic Interpolation
 
-These files contain MATLAB implementations ofthe BIMOND3 and BIMOND4
+These files provide MATLAB implementations ofthe BIMOND3 and BIMOND4
 algorithms presented by Carlson and Fritsch in [1] and [2], respectively.
 
 These functions assume that the following files are available in the
