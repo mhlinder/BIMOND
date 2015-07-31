@@ -23,14 +23,15 @@ MATLAB package.
 
 The BIMOND3 algorithm presented in [1] provides two-dimensional
 interpolation of data that is monotone in both
-variables. `BIMOND3_example.m` reproduces the example given in
+variables. `BIMOND3_example.m` reproduces the numeric example given in
 Appendix B.
 
 ## BIMOND4
 
 The BIMOND4 algorithm presented in [2] provides two-dimensional
 interpolation of data that is monotone in only one
-variable. `BIMOND4_example.m` reproduces the example given in Section 5.
+variable. `BIMOND4_example.m` reproduces the numeric example given in
+Section 5.
 
 ## References
 
