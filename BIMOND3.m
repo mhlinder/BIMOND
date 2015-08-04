@@ -36,6 +36,17 @@ if ~all([nx ny] == size(p))
     error('Input value dimensions do not match function value dimensions.');
 end
 
+% Check that input axes are evenly spaced
+xdiff = diff(x);
+ydiff = diff(y);
+if ~all(xdiff == xdiff(1)) | ~all(ydiff == ydiff(1))
+    error(['Data must be evenly spaced (i.e., `diff(x)` and `diff(y)` ' ...
+           'each consist of a single repeated value.']);
+else
+    xsep = xdiff(1);
+    ysep = ydiff(1);
+end
+
 
 %% Step 1: verify monotonicity, calculate sx and sy, and other
 % variable setup

@@ -6,6 +6,9 @@ respectively. The BIMOND algorithms are a 2D extension of PCHIP
 (Piecewise Cubic Hermite Interpolating Polynomial), preserving
 monotonicity in the underlying data.
 
+Note that input values to both BIMOND3 and BIMOND4 must be evenly
+spaced, though not necessarily with the same spacing in both axes.
+
 These functions assume that the following files are available in the
 user's MATLAB path:
 
