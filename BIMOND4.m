@@ -37,17 +37,6 @@ if ~all([nx ny] == size(p))
     error('Input value dimensions do not match function value dimensions.');
 end
 
-% Check that input axes are evenly spaced
-xdiff = diff(x);
-ydiff = diff(y);
-if ~all(xdiff == xdiff(1)) | ~all(ydiff == ydiff(1))
-    error(['Data must be evenly spaced (i.e., `diff(x)` and `diff(y)` ' ...
-           'each consist of a single repeated value.']);
-else
-    xsep = xdiff(1);
-    ysep = ydiff(1);
-end
-
 
 %% Step 1: Verify monotonicity, compute sx, and other variable setup
 
@@ -111,6 +100,7 @@ end
 IC = [0 0];
 VC = [0 0];
 SWITCH = 1;
+INCFD = 1;
 IERR = 0;
 
 % Initialize partial derivative matrices
@@ -118,7 +108,6 @@ px = nan(size(p));
 py = nan(size(p));
 
 % Set partials with respect to x-axis
-INCFD = xsep;
 for i = 1:length(y)
     [ic,vc,switchml,n,outx,f,d,incfd,wk,nwk,ierr] = pchic(IC, VC, SWITCH, ...
                                                       nx, x, p(:, i), ...
@@ -129,7 +118,6 @@ for i = 1:length(y)
 end
 
 % Set partials with respect to y-axis
-INCFD = ysep;
 for i = 1:length(x)
     [ic,vc,switchml,n,outy,f,d,incfd,wk,nwk,ierr] = pchic(IC, VC, SWITCH, ...
                                                       ny, y, p(i, :), ...
