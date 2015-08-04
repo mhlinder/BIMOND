@@ -25,9 +25,10 @@ nx = length(x);
 ny = length(y);
 
 % Check that input is properly 2-dimensional
-if nx <= 1 | ny <= 1
-    error(['Input data must be 2-dimensional (i.e., `length(x) > 1 ' ...
-           '& length(y) > 1`']);
+if ~(nx >= 4 & ny >= 4)
+    error(['Input data must be 2-dimensional with at least 4 points ' ...
+           'along each input axis (i.e., `length(x) >= 4 & length(y) ' ...
+           '>= 4`']);
 end
 
 % Check that dimensions match. Note that x indexes rows and y
