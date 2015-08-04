@@ -1,9 +1,7 @@
 function [pchstresult,arg1,arg2]=pchst(arg1,arg2);
 
 pchstresult=[];
-persistent firstCall one zero ; if isempty(firstCall),firstCall=1;end; 
-
-;
+persistent firstCall one zero ; if isempty(firstCall),firstCall=1;end; ;
 %***BEGIN PROLOGUE  PCHST
 %***SUBSIDIARY
 %***PURPOSE  PCHIP Sign-Testing Routine
