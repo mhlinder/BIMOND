@@ -102,7 +102,6 @@ end
 IC = [0 0];
 VC = [0 0];
 SWITCH = 1;
-INCFD = 1;
 IERR = 0;
 
 % Initialize partial derivative matrices
@@ -110,6 +109,7 @@ px = nan(size(p));
 py = nan(size(p));
 
 % Set partials with respect to x-axis
+INCFD = xsep;
 for i = 1:length(y)
     [ic,vc,switchml,n,outx,f,d,incfd,wk,nwk,ierr] = pchic(IC, VC, SWITCH, ...
                                                       nx, x, p(:, i), ...
@@ -120,6 +120,7 @@ for i = 1:length(y)
 end
 
 % Set partials with respect to y-axis
+INCFD = ysep;
 for i = 1:length(x)
     [ic,vc,switchml,n,outy,f,d,incfd,wk,nwk,ierr] = pchic(IC, VC, SWITCH, ...
                                                       ny, y, p(i, :), ...
