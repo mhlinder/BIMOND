@@ -21,10 +21,17 @@
 function [px, py, pxy] = BIMOND4(x, y, p)
 
 %% Verify inputs
-% Check that dimensions match. Note that x indexes rows and y
-% indexes columns
 nx = length(x);
 ny = length(y);
+
+% Check that input is properly 2-dimensional
+if nx <= 1 | ny <= 1
+    error(['Input data must be 2-dimensional (i.e., `length(x) > 1 ' ...
+           '& length(y) > 1`']);
+end
+
+% Check that dimensions match. Note that x indexes rows and y
+% indexes columns
 if ~all([nx ny] == size(p))
     error('Input value dimensions do not match function value dimensions.');
 end
