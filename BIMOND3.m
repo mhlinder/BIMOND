@@ -18,14 +18,14 @@
 
 
 %% BIMOND3
-function [px, py, pxy] = BIMOND3(x, y, p);
+function pp2d = BIMOND3(x, y, p);
 
 %% Verify inputs
 nx = length(x);
 ny = length(y);
 
 % Check that input is properly 2-dimensional
-if ~(nx >= 4 & ny >= 4)
+if ~(isvector(x) & isvector(y)) | ~(nx >= 4 & ny >= 4)
     error(['Input data must be 2-dimensional with at least 4 points ' ...
            'along each input axis (i.e., `length(x) >= 4 & length(y) ' ...
            '>= 4`']);
@@ -314,6 +314,8 @@ for i = 1:nx
         end
     end
 end
+
+pp2d = extract_pp(x, y, p, px, py, pxy);
 end % function BIMOND3
     
 
