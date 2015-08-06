@@ -1,4 +1,4 @@
-function alpha = bicubic_polynomial(h, k, p, px, py, pxy)
+function alpha = bicubic_polynomial(h, k, p, px, py, pxy);
 % Inputs p, px, py, pxy are assumed to be 2x2, with rows indexing x
 % and columns indexing y, i.e.,
 % p = [f(0,0) f(0,k);

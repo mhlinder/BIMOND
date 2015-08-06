@@ -18,7 +18,7 @@
 
 
 %% BIMOND4
-function [px, py, pxy] = BIMOND4(x, y, p)
+function [px, py, pxy] = BIMOND4(x, y, p);
 
 %% Verify inputs
 nx = length(x);
