@@ -6,11 +6,9 @@ respectively. The BIMOND algorithms are a 2D extension of PCHIP
 (Piecewise Cubic Hermite Interpolating Polynomial), preserving
 monotonicity in the underlying data.
 
-Note that input values to both BIMOND3 and BIMOND4 must be evenly
-spaced, though not necessarily with the same spacing in both axes.
-
-These functions assume that the following files are available in the
-user's MATLAB path:
+This package depends on the MATLAB Curve Fitting
+Toolbox. Additionally, these functions assume that the following files
+are available in the user's MATLAB path:
 
   * `pchci.m`
   * `pchcs.m`
@@ -24,6 +22,14 @@ as part of the
 [slatec](http://www.mathworks.com/matlabcentral/fileexchange/14535-slatec)
 MATLAB package.
 
+## I/O
+
+Both `BIMOND3` and `BIMOND4` take as input vectors `x` and `y`, and a
+matrix of function values `p` where the rows index `x` and the columns
+index`y`.
+
+The functions output a ppform spline that can be evaluated with
+functions from the MATLAB Curve Fitting Toolbox.
 
 ## BIMOND3
 
