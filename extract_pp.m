@@ -35,12 +35,3 @@ for i = 1:(nx-1)
 end
 
 end
-
-% coefs is 1 x (nx-1) x 4 x (ny-1) x 4, where 4 is the order of the polynomials---ie, cubic
-% Dimensions:
-% 1. Singular dimension
-% 2. x-axis breaks
-% 3. ordered from highest exponent to lowest
-% 4. y-axis breaks
-% 5. ordered from highest exponent to lowest
-% reshape(coefs, [(nx-1)*4 (ny-1)*4]) provides coefficients in the form expected by ppmak
