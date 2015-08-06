@@ -6,6 +6,7 @@
 % Variable" (Carlson and Fritsch, 1991).
 
 clear
+close all
 addpath 'slatec_pchic/';
 
 %% Input data
@@ -17,3 +18,4 @@ p = [0, 2, 19.998, 19.997; ...
      8, 10, 20.001, 20];
 
 pp2d = BIMOND4(x, y, p);
+fnplt(pp2d);
