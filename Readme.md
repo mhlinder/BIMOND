@@ -47,6 +47,10 @@ Section 5.
 
 ## References
 
+This repository is available on
+[Github](http://www.mathworks.com/matlabcentral/fileexchange/52358-bimond--algorithms-for-monotone-piecewise-bicubic-interpolation)
+as well as the MATLAB [File Exchange](http://www.mathworks.com/matlabcentral/fileexchange/52358-bimond--algorithms-for-monotone-piecewise-bicubic-interpolation).
+
 [1] Carlson, R. E., & Fritsch, F. N. (1989). An algorithm for monotone
 piecewise bicubic interpolation. *SIAM Journal on Numerical Analysis*,
 26(1), 230-238.
