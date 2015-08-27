@@ -31,6 +31,9 @@ index`y`.
 The functions output a ppform spline that can be evaluated with
 functions from the MATLAB Curve Fitting Toolbox.
 
+The function `get_coefs` will reformat the ppform spline to a cell of
+coefficient vectors specifying each piecewise polynomial.
+
 ## BIMOND3
 
 The BIMOND3 algorithm presented in [1] provides two-dimensional
@@ -45,11 +48,7 @@ interpolation of data that is monotone in only one
 variable. `BIMOND4_example.m` reproduces the numeric example given in
 Section 5.
 
-## References
-
-This repository is available on
-[Github](http://www.mathworks.com/matlabcentral/fileexchange/52358-bimond--algorithms-for-monotone-piecewise-bicubic-interpolation)
-as well as the MATLAB [File Exchange](http://www.mathworks.com/matlabcentral/fileexchange/52358-bimond--algorithms-for-monotone-piecewise-bicubic-interpolation).
+## References.
 
 [1] Carlson, R. E., & Fritsch, F. N. (1989). An algorithm for monotone
 piecewise bicubic interpolation. *SIAM Journal on Numerical Analysis*,

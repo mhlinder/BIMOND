@@ -1,12 +1,12 @@
-%% BIMOND_extract_pp.m
+%% extract_pp.m
 % M. Henry Linder (mhlinder@gmail.com)
 % 
 % This M-file formats the output from the BIMOND algorithms as a
 % ppform piecewise-polynomial for use with functions from the Curve
 % Fitting Toolbox.
 
-%% BIMOND_extract_pp
-function pp2d = BIMOND_extract_pp(x, y, p, px, py, pxy);
+%% extract_pp
+function pp2d = extract_pp(x, y, p, px, py, pxy);
 nx = length(x);
 ny = length(y);
 
