@@ -49,6 +49,8 @@ if ~(all(all(diff(p, 1, 1) > 0)) | all(all(diff(p, 1, 1) < 0)))
         x = y;
         y = input_x;
         p = p';
+        nx = length(x);
+        ny = length(y);
     else
         error(['Input function values are not monotone along either ' ...
                'axis. BIMOND4 requires that the interpolated function ' ...
