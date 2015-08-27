@@ -254,9 +254,13 @@ end
 
 %% If input data is monotone along y-axis, revert to original axes
 if flipped
+    x_old = x;
+    x = y;
+    y = x_old;
     px_old = px;
-    px = py;
-    py = px_old;
+    px = py';
+    py = px_old';
+    p = p';
     pxy = pxy';
 end
 
